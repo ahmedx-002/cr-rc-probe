@@ -1,3 +1,9 @@
 language: "en-US"
 reviews:
   request_changes_workflow: true
+  pre_merge_checks:
+    custom_checks:
+      - name: "I197 Gate"
+        mode: "error"
+        instructions: >
+          Fail if the diff adds any file under vuln/.
